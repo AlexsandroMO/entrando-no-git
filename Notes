@@ -1,0 +1,32 @@
+//https://www.youtube.com/watch?v=eWZ58c_Sqm8
+
+
+
+
+Instalar o git:
+https://git-scm.com/download/win
+
+No bash do git:
+
+Conectar com github
+ssh-keygen -t rsa -b 4096 -C "sandrobass@hotmail.com"
+enter..
+
+testar se ta rodando:
+eval "$(ssh-agent -s)"
+enter
+
+Adicionar chave:
+ssh-add .ssh/id_rsa
+enter
+
+copiar chave para o github:
+clip < .ssh/id_rsa.pub
+enter (isso vai copiar a chave pra memória)
+
+vai no github >> settings >> SSH and GPG keys
+cria uma chave e cola a chave que ta na memória
+
+volta no gitbash digita:
+ssh -T git@github.com
+enter
